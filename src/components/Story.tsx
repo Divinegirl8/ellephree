@@ -5,14 +5,21 @@ import TaglineStrip from './TaglineStrip';
 export default function Story() {
   return (
     <>
-          <TaglineStrip />
-    <section id="story" className="py-24 h-screen mt-10 px-10">
+        <div className='max-sm:mt-10'>
+        <TaglineStrip />
+        </div>
+          <section
+  id="story"
+  className="min-h-[calc(100vh-80px)] flex items-center md:py-24 max-sm:mt-10 px-10"
+>
     
-      <div className="mx-auto max-w-page px-6 md:px-8">
-        <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
+      <div className="mx-auto max-w-page  md:px-8">
+        <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2 ">
+
+
     
           <Reveal>
-            <span className="font-mono text-[0.72rem] uppercase tracking-[0.18em] text-sage">
+            <span className="font-mono text-[0.72rem] uppercase tracking-[0.18em] text-sage ">
               Act I — Our Story
             </span>
             <h2 className="mt-3.5 font-display text-[1.8rem] text-forest sm:text-3xl md:text-4xl">
@@ -35,7 +42,7 @@ export default function Story() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="mx-auto max-w-85 rounded-t-[170px] rounded-b-[18px] bg-linear-to-br from-lavender to-sage p-4.5">
+            <div className="mx-auto max-w-85 rounded-t-[170px] rounded-b-[18px] bg-linear-to-br from-lavender to-sage p-4.5 hidden md:block">
               <img
                 src={logo}
                 alt="Ellephree Creations mark"

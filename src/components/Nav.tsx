@@ -14,42 +14,53 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-bborder-ink/10 bg-cream/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 bg-cream/90 backdrop-blur-[30px]">
       <div className="mx-auto flex max-w-page items-center justify-between px-6 py-4 md:px-8">
+        {/* Logo */}
         <a href="#top" className="flex items-center gap-3">
           <img
             src={logo}
             alt="Ellephree Creations logo"
             className="h-9 w-9 rounded-full object-cover ring-2 ring-lavender ring-offset-2 ring-offset-cream"
           />
+
           <span className="font-display text-lg font-semibold tracking-tight text-forest">
             Ellephree
           </span>
         </a>
 
         <button
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen((o) => !o)}
-          className="flex flex-col gap-1.5 p-1.5 md:hidden"
-        >
-          <span className="block h-0.5 w-6 bg-forest" />
-          <span className="block h-0.5 w-6 bg-forest" />
-          <span className="block h-0.5 w-6 bg-forest" />
-        </button>
+  type="button"
+  onClick={() => setOpen(!open)}
+  aria-label="Toggle menu"
+  className="relative flex h-10 w-10 items-center justify-center md:hidden"
+>
+  <div className="space-y-1.5">
+    <span
+      className={`block h-0.5 w-6 bg-black transition ${
+        open ? "translate-y-2 rotate-45" : ""
+      }`}
+    />
+    <span
+      className={`block h-0.5 w-6 bg-black transition ${
+        open ? "opacity-0" : ""
+      }`}
+    />
+    <span
+      className={`block h-0.5 w-6 bg-black transition ${
+        open ? "-translate-y-2 -rotate-45" : ""
+      }`}
+    />
+  </div>
+</button>
 
-        <ul
-          className={`fixed inset-x-0 top-16 flex flex-row flex-wrap gap-x-6 gap-y-3 border-b border-ink/10 bg-cream px-6 py-5 transition-transform duration-300 ease-out
-            md:static md:translate-y-0 md:border-none md:bg-transparent md:p-0
-            ${open ? 'translate-y-0' : 'translate-y-[-150%] md:translate-y-0'}`}
-        >
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center gap-8">
           {ACTS.map((act) => (
             <li key={act.href}>
               <a
                 href={act.href}
-                onClick={() => setOpen(false)}
-                className="font-mono text-[0.7rem] uppercase tracking-widest text-ink/70 transition-colors hover:text-plum"
+                className="font-mono text-[0.7rem] uppercase tracking-widest text-ink/70 hover:text-plum transition"
               >
                 {act.label}
               </a>
@@ -57,6 +68,27 @@ export default function Nav() {
           ))}
         </ul>
       </div>
+
+   {/* Mobile Menu */}
+<div
+  className={`absolute left-0 top-full z-50 w-full md:hidden overflow-hidden bg-white shadow-lg transition-all duration-300 ${
+    open ? "max-h-125" : "max-h-0"
+  }`}
+>
+  <ul className="flex flex-col gap-6 px-6 py-6">
+    {ACTS.map((act) => (
+      <li key={act.href}>
+        <a
+          href={act.href}
+          onClick={() => setOpen(false)}
+          className="block font-mono text-sm uppercase tracking-widest text-ink/70 hover:text-plum"
+        >
+          {act.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
     </header>
   );
 }
