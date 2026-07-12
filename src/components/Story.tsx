@@ -1,5 +1,5 @@
 import Reveal from './Reveal';
-import logo from '../assets/logo-removebg-preview.png';
+import logo from '../assets/yellow.png';
 import TaglineStrip from './TaglineStrip';
 
 export default function Story() {
@@ -14,11 +14,11 @@ export default function Story() {
 >
     
       <div className="mx-auto max-w-page  md:px-8">
-        <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2 ">
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 ">
 
 
     
-          <Reveal>
+          <Reveal delay={120}>
             <span className="font-mono text-[0.72rem] uppercase tracking-[0.18em] text-sage ">
               Act I — Our Story
             </span>
@@ -41,8 +41,8 @@ export default function Story() {
             </p>
           </Reveal>
 
-          <Reveal delay={120}>
-            <div className="mx-auto max-w-85 rounded-t-[170px] rounded-b-[18px] bg-linear-to-br from-lavender to-sage p-4.5 hidden md:block">
+          <Reveal delay={150}>
+            <div className="mx-auto max-w-lg -mt-20 rounded-t-[170px] rounded-b-[18px] bg-linear-to-br from-lavender to-sage p-4.5 hidden lg:block">
               <img
                 src={logo}
                 alt="Ellephree Creations mark"

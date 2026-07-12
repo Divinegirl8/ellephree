@@ -12,7 +12,7 @@ export default function MissionVision() {
       </div>
       </Reveal>
 
-      <Reveal delay={120}>
+      <Reveal delay={150}>
       <div className="book ">
         <div className="page mission">
           <span className="eyebrow">Our Mission</span>

@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 
 
 export default function ContactFooter() {
@@ -20,8 +21,12 @@ export default function ContactFooter() {
       </svg>
     </div>
     <div className="cc-inner">
+      <Reveal delay={450}>
       <span className="eyebrow ">Curtain Call</span>
       <h2>Create. Manage. Inspire.</h2>
+      </Reveal>
+
+      <Reveal delay={500}>
       <div className="contact-grid">
         <div className="contact-card ">
           <span className="eyebrow">Phone</span>
@@ -36,10 +41,14 @@ export default function ContactFooter() {
           <a href="https://www.ellephree.org">www.ellephree.org</a>
         </div>
       </div>
+      </Reveal>
+
+      <Reveal delay={550}>
       <div className="cc-bottom">
         <span>© 2026 Ellephree Creations</span>
         <span>Lagos, Nigeria</span>
       </div>
+      </Reveal>
     </div>
   </footer>
   );

@@ -1,15 +1,21 @@
+import Reveal from "./Reveal";
 
 
 export default function CoreValues() {
   return (
     <section className="act" id="values">
+ 
     <div className="wrap">
+    <Reveal delay={180}>
       <div className="act-head">
         <span className="eyebrow" >Act III — Core Values</span>
         <h2>What grows through everything we make.</h2>
       </div>
+      </Reveal>
+      <Reveal delay={220}>
       <div className="vine-wrap ">
         <div className="stem"></div>
+        
         <div className="value-row">
           <h3>Excellence</h3>
           <p>We are committed to delivering high-quality creative experiences with professionalism and attention to detail.</p>
@@ -35,6 +41,7 @@ export default function CoreValues() {
           <p>We use creativity to educate, empower, preserve culture, and contribute to sustainable community development.</p>
         </div>
       </div>
+      </Reveal>
     </div>
   </section>
   );
