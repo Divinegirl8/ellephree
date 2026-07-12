@@ -1,7 +1,7 @@
 import ContactFooter from "./components/ContactFooter";
 import CoreValues from "./components/CoreValues";
 import Culture from "./components/Culture";
-import Hero from "./components/Hero";
+
 import MissionVision from "./components/MissionVision";
 import Nav from "./components/Nav";
 import Story from "./components/Story";

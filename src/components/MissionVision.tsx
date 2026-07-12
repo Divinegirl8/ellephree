@@ -8,7 +8,7 @@ export default function MissionVision() {
     <Reveal delay={120}>
       <div className="act-head ">
         <span className="eyebrow">Act II — Mission &amp; Vision</span>
-        {/* <h2>Two pages of the same programme.</h2> */}
+        <h2>Our Mission & Vision</h2>
       </div>
       </Reveal>
 
