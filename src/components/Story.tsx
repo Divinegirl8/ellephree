@@ -19,7 +19,7 @@ export default function Story() {
 
     
           <Reveal delay={120}>
-            <span className="font-mono text-[0.72rem] uppercase tracking-[0.18em] text-sage ">
+            <span className="font-mono text-[0.72rem] uppercase tracking-[0.18em] text-[#7f9c73] font-semibold text-sage ">
               Act I — Our Story
             </span>
             <h2 className="mt-3.5 font-display text-[1.8rem] text-forest sm:text-3xl md:text-4xl">

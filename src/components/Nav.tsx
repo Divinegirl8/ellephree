@@ -71,7 +71,7 @@ export default function Nav() {
 
    {/* Mobile Menu */}
 <div
-  className={`absolute left-0 top-full z-50 w-full md:hidden overflow-hidden bg-white shadow-lg transition-all duration-300 ${
+  className={`absolute left-0 top-full z-50 w-full md:hidden overflow-hidden bg-[#808000] shadow-lg transition-all duration-300 ${
     open ? "max-h-125" : "max-h-0"
   }`}
 >

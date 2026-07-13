@@ -5,13 +5,13 @@
     --cream:#faf6ef;
     --cream-2:#f2ecdf;
     --ink:#23241d;
-    --forest:#20392a;
-    --forest-2:#2d4d38;
+    --forest:#808000;
+    --forest-2:#808000;
     --sage:#7f9c73;
     --sage-light:#c3d3b6;
-    --lavender:#b9a3de;
+    --lavender:#E4CBFF;
     --lavender-light:#e3d9f4;
-    --plum:#4a3465;
+    --plum:#E4CBFF;
     --plum-2:#3a2850;
     --line: rgba(35,36,29,0.14);
     --max: 1180px;
@@ -179,10 +179,10 @@
   }
   @media (max-width:760px){ .book{grid-template-columns:1fr;} }
   .book .page{padding:52px 44px; position:relative;}
-  .page.mission{background:var(--plum); color:var(--lavender-light);}
+  .page.mission{background:var(--plum); color:var(--ink);}
   .page.vision{background:var(--forest); color:var(--sage-light);}
   .page .eyebrow{opacity:0.7; margin-bottom:16px; display:block;}
-  .page h3{font-size:1.5rem; font-style:italic; margin-bottom:16px; color:#fff;}
+  .page h3{font-size:1.5rem; font-style:italic; margin-bottom:16px; color:var(--plum-2)}
   .page p{font-weight:300; font-size:0.98rem; opacity:0.92;}
   .book .fold{
     position:absolute; top:0; bottom:0; left:0; width:1px;
@@ -207,7 +207,7 @@
     position:absolute; left:-4px; top:6px; width:11px; height:11px;
     background:var(--cream); border:3px solid var(--sage); border-radius:50%;
   }
-  .value-row h3{font-size:1.15rem; font-style:italic; color:var(--plum); margin-bottom:6px;}
+  .value-row h3{font-size:1.15rem; font-style:italic; color:var(--forest); margin-bottom:6px;}
   .value-row p{margin:0; color:rgba(35,36,29,0.78); max-width:56ch; font-size:0.96rem;}
 
   /* what we do - call sheet */
@@ -244,8 +244,8 @@
   .triad-card{
     background:#fff; border:1px solid var(--line); border-radius:16px; padding:30px 26px;
   }
-  .triad-card .eyebrow{color:var(--lavender); display:block; margin-bottom:10px;}
-  .triad-card h3{font-size:1.15rem; font-style:italic; color:var(--plum); margin-bottom:10px;}
+  .triad-card .eyebrow{color:var(--ink); display:block; margin-bottom:10px;}
+  .triad-card h3{font-size:1.15rem; font-style:italic; color:var(--forest-2); margin-bottom:10px;}
   .triad-card p{margin:0; font-size:0.92rem; color:rgba(35,36,29,0.75);}
 
   /* curtain call / contact footer */
